@@ -1,4 +1,4 @@
-# Carga de Datos
+# Cargar datos
 
 rm(list=ls()) # Limpiar el entorno actual de trabajo 
 
@@ -30,16 +30,10 @@ datos_gen$clase <- datos_muestras$clase
 # Comprobar datos
 head(datos_gen)
 
-
 # Preparar Datos para Limpieza 
 
 # Crear un dataframe para limpieza excluyendo las últimas dos columnas
 datos_para_limpiar = select(datos_gen, -muestra, -clase)
-
-# Verificar las dimensiones del conjunto de datos
-print(paste("El conjunto de datos tiene", nrow(datos_para_limpiar), "filas y", ncol(datos_para_limpiar), "columnas."))
-
-# Identificación de Valores no Numéricos
 
 # Identificar qué columnas no son numéricas
 no_numerico <- sapply(datos_para_limpiar, function(x) !is.numeric(x))
@@ -49,7 +43,6 @@ no_numerico <- names(datos_para_limpiar)[no_numerico]
 print(no_numerico)
 
 # Verificar los datos almacenados como texto
-# datos_para_limpiar$CFB
 
 # Visualizar el tipo de cada una de las columnas no numéricas
 tipos_no_numericos <- sapply(datos_para_limpiar[no_numerico], class)
