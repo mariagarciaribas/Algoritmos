@@ -1,9 +1,9 @@
 
 # Actividad Grupal - Algor?tmos e Inteligencia Artificial
 
-# -- ?scar N??ez L?pez
+# -- Oscar Núñez López
 
-# -- Mar?a Garc?a Ribas
+# -- Maria Garcia Ribas
 
 ###################################################
 # Procesamiento de datos #
